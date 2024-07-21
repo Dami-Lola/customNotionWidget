@@ -15,14 +15,35 @@
             background-color: #f0f0f0;
         }
         .youtube-widget {
-            width: 560px;
-            height: 315px;
+            width: 100px;
+            height: 100px;
+            background-color: #FF0000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .youtube-logo {
+            color: white;
+            font-size: 50px;
+            line-height: 0;
+        }
+        .youtube-logo::before {
+            content: "▶";
         }
     </style>
 </head>
 <body>
-    <div class="youtube-widget">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/_XF0yygBsPY&t=104s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="youtube-widget" onclick="openYouTubeVideo()">
+        <div class="youtube-logo"></div>
     </div>
+
+    <script>
+        function openYouTubeVideo() {
+            window.open("https://www.youtube.com/watch?v=gG2Ikd8Gx3g", "_blank");
+        }
+    </script>
 </body>
 </html>
