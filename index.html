@@ -3,47 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Widget</title>
+    <title>Weather Widget</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
         }
-        .youtube-widget {
-            width: 100px;
-            height: 100px;
-            background-color: #FF0000;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            position: relative;
+        .weather-widget {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        .youtube-logo {
-            color: white;
+        .weather-icon {
             font-size: 50px;
-            line-height: 0;
         }
-        .youtube-logo::before {
-            content: "▶";
+        .temperature {
+            font-size: 30px;
+            margin: 10px 0;
+        }
+        .condition {
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="youtube-widget" onclick="openYouTubeVideo()">
-        <div class="youtube-logo"></div>
+    <div class="weather-widget">
+        <div class="weather-icon">☀️</div>
+        <div class="temperature">25°C</div>
+        <div class="condition">Sunny</div>
     </div>
-
-    <script>
-        function openYouTubeVideo() {
-            window.open("https://www.youtube.com/watch?v=gG2Ikd8Gx3g", "_blank");
-        }
-    </script>
 </body>
 </html>
